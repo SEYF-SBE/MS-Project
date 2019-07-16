@@ -7,33 +7,242 @@ and open the template in the editor.
     Created on : 14 juil. 2019, 15:59:24
     Author     : Utilisateur 1
 */
-
+/* login image background style */
 .divConnect{
     margin: 0;
     padding: 0;
-    height: 500px;
-    background: url(solo-travel.jpg);
+    height: 550px;
+    background: url(../img/solo-travel.jpg);
     font-family: sans-serif
 }
 
+/* login avatar image style */
 .imageAvatar{
-    max-height: 150px;
-    max-width: 200px;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
 }
 
+/* login div style */
 .loginBox{
     width: 320PX;
-    height: 420PX;
-    background: #000;
-   /* opacity: 0.3;
-    filter: alpha(opacity=50);*/
+    height: 450PX;
+    background: rgba(0,0,0,0.5);
+    /* opacity: 0.3;
+     filter: alpha(opacity=50);*/
     color: #fff;
-    top: 10%;
+    top: 15%;
     left: 10%;
     position: absolute;
     transform: translate (-50%, -50%);
     box-sizing: border-box;
+    padding: 60px 30px;
+}
+
+/* title login box */
+.titleLogin{
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.loginBox p{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.loginBox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginBox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.loginBox button{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    background: #1abc9c;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginBox button:hover{
+    cursor: pointer;
+    background: #27ae60;
+    color: #000;
+}
+
+.forgetSignUp{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.loginBox a:hover{
+    color: white;
+}
+
+.textForget{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 60%;
+    transform: translate(-0%, -50%);
+}
+
+.signUp{
+    position: absolute;
+    float: left;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.facebookTwitter{
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+.or-seperator {
+    margin: 30px 0 0px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+.or-seperator b {
+    color: #000;
+    padding: 0 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    background: #fff;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    top: -22px;
+    z-index: 1;
+}
+
+/* navbar style */
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    font-family: sans-serif
+}
+
+.logo {
+    line-height: 20px;
+    position: fixed;
+    float: left;
+    margin: 16px 46px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+
+nav ul {
+    line-height: 20px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #000;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 40px;;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+@media(max-width: 786px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+
+    nav.black ul {
+        background: #000;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
 
 }
+
