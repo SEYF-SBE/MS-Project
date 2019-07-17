@@ -27,7 +27,7 @@ and open the template in the editor.
 /* login div style */
 .loginBox{
     width: 320PX;
-    height: 450PX;
+    height: 400PX;
     color: #fff;
     top: 15%;
     left: 10%;
@@ -72,31 +72,26 @@ and open the template in the editor.
 }
 
 .signUPBoxButton1{
-    border: none;
-    outline: none;
-    height: 30px;
-    position: relative;
-    float: left;
-    top: 50%;
     background: #1abc9c;
     color: white;
-    font-size: 16px;
-    border-radius: 20px;
-    left: 70%;
+    left: 60%;
+    width: 100px;
 }
-
-.signUPBoxButton2{
+.shareBetweenButtons{
     border: none;
     outline: none;
     height: 30px;
     position: relative;
     float: left;
     top: 50%;
-    background: #FFF;
-    color: black;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 20px;
+}
+.signUPBoxButton2{
+    background: #FFF;
     left: 45%;
+    color: black;
+    width: 80px;
 }
 
 .loginBoxButton{
@@ -124,7 +119,7 @@ and open the template in the editor.
     position: relative;
     float: left;
     top: 50%;
-    left: 60%;
+    left: 63%;
     transform: translate(-0%, -50%);
     text-decoration: none;
     font-size: 12px;
@@ -151,7 +146,7 @@ and open the template in the editor.
 .facebookTwitter{
     border: none;
     outline: none;
-    height: 40px;
+    height: 30px;
     width: 100%;
     font-size: 17px;
     border-radius: 20px;

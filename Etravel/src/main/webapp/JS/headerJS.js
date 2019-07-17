@@ -16,10 +16,25 @@ $("#NextButton").on("click", function () {
     $("#passwordDiv").show(500);
 });
 
-$(".signUp").on("click", function(){
+$(".signUp").on("click", function () {
     $(".signinDiv").hide(500);
     $(".loginBox").width(500);
+    $(".loginBox").height(320);
     $("#signUpBox").width(500);
     $("#signUpBox").show(500);
+});
+
+$(".signUPBoxButton2").on("click", function () {
+    $("#signUpBox").hide(500);
+    $("#signUpBox").width(260);
+    $(".loginBox").width(260);
+    $("#signinForm").trigger("reset");
+    $(".signinDiv").show(500);
+});
+
+$(".textForget").on("click", function () {
+    $(".signinDiv").hide(500);
+    $(".loginBox").height(250);
+    $(".forgetPWDiv").show(500);
 });
 
