@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 $("#NextButton").on("click", function () {
     /* Ajax function to find if the username/email is in database */
-    $("#userNameDiv").hide();
-    $("#passwordDiv").show();
+    $("#userNameDiv").hide(500);
+    $("#passwordDiv").show(500);
 });
 

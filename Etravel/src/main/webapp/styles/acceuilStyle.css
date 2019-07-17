@@ -9,9 +9,8 @@ and open the template in the editor.
 */
 /* login image background style */
 .divConnect{
-    margin: 0;
-    padding: 0;
-    height: 550px;
+   
+    height: 560px;
     background: url(../img/solo-travel.jpg);
     font-family: sans-serif
 }
@@ -71,7 +70,7 @@ and open the template in the editor.
     font-size: 13px;
 }
 
-.loginBox button{
+.loginBoxButton{
     border: none;
     outline: none;
     height: 40px;
@@ -82,7 +81,7 @@ and open the template in the editor.
     border-radius: 20px;
 }
 
-.loginBox button:hover{
+.loginBoxButton:hover{
     cursor: pointer;
     background: #27ae60;
     color: #000;
@@ -116,9 +115,12 @@ and open the template in the editor.
 }
 
 .facebookTwitter{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    font-size: 18px;
     border-radius: 20px;
-    color: white;
-    font-size: 16px;
 }
 
 .or-seperator {
@@ -163,6 +165,11 @@ and open the template in the editor.
     font-size: 20px;
     font-family: sans-serif;
     letter-spacing: 2px;
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 nav {
@@ -185,19 +192,20 @@ nav ul {
     transition: 1s;
 }
 
-nav.black ul {
-    background: #000;
-}
-
 nav ul li {
     display: inline-block;
-    padding: 16px 40px;;
+    padding: 20px 20px;;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #000;
     font-size: 16px;
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 .menu-icon {
@@ -218,31 +226,6 @@ nav ul li a {
         position: fixed;
         top: 0;
         margin-top: 16px;
+        color: whitesmoke;
     }
-
-    nav ul {
-        max-height: 0px;
-        background: #000;
-    }
-
-    nav.black ul {
-        background: #000;
-    }
-
-    .showing {
-        max-height: 34em;
-    }
-
-    nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
 }
-

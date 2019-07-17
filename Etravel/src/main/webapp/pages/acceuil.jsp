@@ -33,21 +33,21 @@
                 <img src="../img/User_Avatar_2.png" alt="" class="imageAvatar"/>
                 <h1 class="titleLogin"><b>Login</b></h1>
                 <div class="text-center social-btn">
-                    <a href="#" class="facebookTwitter btn btn-primary btn-lg btn-block "><i class="fa fa-facebook"> &nbsp;</i> Sign in with <b>Facebook</b></a>
-                    <a href="#" class="facebookTwitter btn btn-danger btn-lg btn-block"><i class="fa fa-google"> &nbsp;</i> Sign in with <b>Google</b></a>
+                    <button class="facebookTwitter btn-primary btn-block "><i class="fa fa-facebook"> &nbsp;</i> Sign in with <b>Facebook</b></button>
+                    <button class="facebookTwitter btn-danger btn-block"><i class="fa fa-google"> &nbsp;</i> Sign in with <b>Google</b></button>
                     <div class="or-seperator"><b>or</b></div>
                 </div>
                 
                 <div id="userNameDiv">
                     <p>Username</p>
                     <input type="text" name="" placeholder="Enter Username or Email"/> <br/>
-                    <button type="button" id="NextButton" >Next</button>
+                    <button type="button" id="NextButton" class="loginBoxButton">Next</button>
                 </div>
                 <div style="display: none;" id="passwordDiv">
                     <p>Password</p>
                     <input type="password" name="" placeholder="Enter Password"/> <br/>
                     <a href="#" class="textForget forgetSignUp">Forget password ?</a><br/> 
-                    <button type="submit" name="">Login</button><br/>
+                    <button type="submit" name="" class="loginBoxButton">Login</button><br/>
                 </div>
                 <br/>
                 <a href="#" class="signUp forgetSignUp">Don't have an account ?</a>
