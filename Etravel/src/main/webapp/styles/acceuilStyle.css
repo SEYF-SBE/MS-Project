@@ -9,7 +9,6 @@ and open the template in the editor.
 */
 /* login image background style */
 .divConnect{
-   
     height: 560px;
     background: url(../img/solo-travel.jpg);
     font-family: sans-serif
@@ -29,9 +28,6 @@ and open the template in the editor.
 .loginBox{
     width: 320PX;
     height: 450PX;
-    background: rgba(0,0,0,0.5);
-    /* opacity: 0.3;
-     filter: alpha(opacity=50);*/
     color: #fff;
     top: 15%;
     left: 10%;
@@ -39,6 +35,10 @@ and open the template in the editor.
     transform: translate (-50%, -50%);
     box-sizing: border-box;
     padding: 60px 30px;
+}
+
+.transparenceEffect{
+    background: rgba(0,0,0,0.5);
 }
 
 /* title login box */
@@ -68,6 +68,35 @@ and open the template in the editor.
     height: 40px;
     color: #fff;
     font-size: 13px;
+    height: 20px;
+}
+
+.signUPBoxButton1{
+    border: none;
+    outline: none;
+    height: 30px;
+    position: relative;
+    float: left;
+    top: 50%;
+    background: #1abc9c;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    left: 70%;
+}
+
+.signUPBoxButton2{
+    border: none;
+    outline: none;
+    height: 30px;
+    position: relative;
+    float: left;
+    top: 50%;
+    background: #FFF;
+    color: black;
+    font-size: 16px;
+    border-radius: 20px;
+    left: 45%;
 }
 
 .loginBoxButton{
@@ -87,13 +116,6 @@ and open the template in the editor.
     color: #000;
 }
 
-.forgetSignUp{
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgray;
-}
-
 .loginBox a:hover{
     color: white;
 }
@@ -104,9 +126,17 @@ and open the template in the editor.
     top: 50%;
     left: 60%;
     transform: translate(-0%, -50%);
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
 }
 
 .signUp{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
     position: absolute;
     float: left;
     top: 96%;
@@ -114,12 +144,25 @@ and open the template in the editor.
     transform: translate(-50%, -50%);
 }
 
+.displayHide{
+    display: none;
+}
+
 .facebookTwitter{
     border: none;
     outline: none;
     height: 40px;
     width: 100%;
-    font-size: 18px;
+    font-size: 17px;
+    border-radius: 20px;
+}
+
+.facebookTwitterSignUp{
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 47%;
+    font-size: 16px;
     border-radius: 20px;
 }
 

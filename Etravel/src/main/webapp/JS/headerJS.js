@@ -16,3 +16,10 @@ $("#NextButton").on("click", function () {
     $("#passwordDiv").show(500);
 });
 
+$(".signUp").on("click", function(){
+    $(".signinDiv").hide(500);
+    $(".loginBox").width(500);
+    $("#signUpBox").width(500);
+    $("#signUpBox").show(500);
+});
+
