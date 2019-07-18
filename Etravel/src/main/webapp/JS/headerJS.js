@@ -8,6 +8,17 @@ $(document).ready(function () {
     $(".menu-icon").on("click", function () {
         $("nav ul").toggleClass("showing");
     });
+    
+    var date_input = $('input[name="date"]');
+    var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+    date_input.datepicker({
+        format: 'dd/mm/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+    });
+    /*var dateValue = document.getElementById("date");
+    alert(dateValue.value);*/
 });
 
 $("#NextButton").on("click", function () {
@@ -37,4 +48,3 @@ $(".textForget").on("click", function () {
     $(".loginBox").height(250);
     $(".forgetPWDiv").show(500);
 });
-

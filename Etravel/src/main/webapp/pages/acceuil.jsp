@@ -27,6 +27,17 @@
         <title>Acceuil</title>
     </head>
     <body>
+        <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
+
+        <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
+        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+        <!--Font Awesome (added because you use icons in your prepend/append)-->
+        <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+        <!-- Inline CSS based on choices in "Settings" tab -->
+        <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+
         <c:import url="header.jsp" />
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
@@ -72,7 +83,7 @@
                                 <input type="text" name="" placeholder="Last name"  title="Enter last name"/>
                             </div>
                         </div>
-                        <input type="text" name="" placeholder="Birthday" title="Enter Birthday date" />
+                        <input type="text" name="date" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
                         <input type="text" name="" placeholder="Username" title="Enter username"/>
                         <div class="row">
                             <div class="form-group col-xs-6">
@@ -111,6 +122,11 @@
 
         </div>
         <c:out value="adib dont worry jstl is working" />
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+        <script src="../JS/headerJS.js" type="text/javascript"></script>
     </body>
-    <script src="../JS/headerJS.js" type="text/javascript"></script>
+
 </html>
