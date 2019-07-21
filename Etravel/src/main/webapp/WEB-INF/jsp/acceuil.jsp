@@ -11,7 +11,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>
+
+
+        <link href="../../ressources/styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>
+        <link href="../../ressources/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="META-INF.resources.webjars.bootstrap.4.3.0.css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="<c:url value="/resources/javascript/headerJS.js" />"></script>
+        <link href="../../ressources/styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>
+        <link href="../../ressources/styles/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="../../styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>-->
         <script
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -41,7 +49,9 @@
         <c:import url="header.jsp" />
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
-                <img src="../img/User_Avatar_2.png" alt="" class="imageAvatar"/>
+                <img src="<c:url value="/img/User_Avatar_2.png"/>" class="imageAvatar"/>
+  
+                
                 <div class="signinDiv">
                     <h1 class="titleLogin"><b>Sign in</b></h1>
                     <div class="text-center social-btn">
@@ -126,30 +136,33 @@
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../img/4-iPad-Or-24-Carats-Hotel-Burj-al-Arab-de-Dubai.jpg" alt=""/>
+                    <img src="../../ressources/img/4-iPad-Or-24-Carats-Hotel-Burj-al-Arab-de-Dubai.jpg" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../img/centauro-rent-a-car-lisboa-portugal.jpg" alt=""/>
+                    <img src="../../ressources/img/centauro-rent-a-car-lisboa-portugal.jpg" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../img/avion.jpg" alt=""/>
+                    <img src="../../ressources/img/avion.jpg" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../img/train-hack-featured.jpg" alt=""/>
+                    <img src="../../ressources/img/train-hack-featured.jpg" alt=""/>
                 </div>
             </div>         
         </div>
 
+        <script src="META-INF.resources.webjars.bootstrap.4.3.0.js/bootstrap.min.js"></script>
+                <script src="META-INF.resources.webjars.jquery.3.4.0.dist/jquery.min.js"></script>
+                <script src="../../ressources/javascript/bootstrap.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-        <script src="../JS/headerJS.js" type="text/javascript"></script>
+        <!--<script src="../../JS/headerJS.js" type="text/javascript"></script>-->
     </body>
 
 </html>

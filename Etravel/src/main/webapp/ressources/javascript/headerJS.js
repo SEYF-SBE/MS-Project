@@ -15,7 +15,7 @@ $(document).ready(function () {
         format: 'dd/mm/yyyy',
         container: container,
         todayHighlight: true,
-        autoclose: true,
+        autoclose: true
     });
     /*var dateValue = document.getElementById("date");
     alert(dateValue.value);*/
