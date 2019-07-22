@@ -30,7 +30,7 @@ $("#NextButton").on("click", function () {
 $(".signUp").on("click", function () {
     $(".signinDiv").hide(500);
     $(".loginBox").width(500);
-    $(".loginBox").height(320);
+    $(".loginBox").height(330);
     $("#signUpBox").width(500);
     $("#signUpBox").show(500);
 });

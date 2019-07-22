@@ -12,37 +12,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-        <link href="../../ressources/styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>
-        <link href="../../ressources/styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="META-INF.resources.webjars.bootstrap.4.3.0.css/bootstrap.min.css" rel="stylesheet"/>
-        <script src="<c:url value="/resources/javascript/headerJS.js" />"></script>
-        <link href="../../ressources/styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>
-        <link href="../../ressources/styles/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <!--<link href="../../styles/acceuilStyle.css" rel="stylesheet" type="text/css"/>-->
+        <link href="<c:url value="/styles/acceuilStyle.css"/>" rel="stylesheet" type="text/css"/>
         <script
             src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
         </script>
-
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
         <title>Acceuil</title>
     </head>
     <body>
         <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
-
         <!-- Special version of Bootstrap that is isolated to content wrapped in .bootstrap-iso -->
         <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-
         <!--Font Awesome (added because you use icons in your prepend/append)-->
         <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-
         <!-- Inline CSS based on choices in "Settings" tab -->
         <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 
@@ -50,8 +38,7 @@
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
                 <img src="<c:url value="/img/User_Avatar_2.png"/>" class="imageAvatar"/>
-  
-                
+
                 <div class="signinDiv">
                     <h1 class="titleLogin"><b>Sign in</b></h1>
                     <div class="text-center social-btn">
@@ -93,7 +80,14 @@
                                 <input type="text" name="" placeholder="Last name"  title="Enter last name"/>
                             </div>
                         </div>
-                        <input type="text" name="date" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <input type="text" name="date" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
+                            </div> 
+                            <div class="form-group col-xs-6">
+                                <input type="text" name="" placeholder="Telephone number"  title="Enter your telphone number"/>
+                            </div>
+                        </div>
                         <input type="text" name="" placeholder="Username" title="Enter username"/>
                         <div class="row">
                             <div class="form-group col-xs-6">
@@ -131,38 +125,33 @@
             </div>
 
         </div>
-        <c:out value="adib dont worry jstl is working" />
-
+        <h1><c:out value=" Our services" /></h1>
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../../ressources/img/4-iPad-Or-24-Carats-Hotel-Burj-al-Arab-de-Dubai.jpg" alt=""/>
+                    <img src="<c:url value="/img/4-iPad-Or-24-Carats-Hotel-Burj-al-Arab-de-Dubai.jpg"/>" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../../ressources/img/centauro-rent-a-car-lisboa-portugal.jpg" alt=""/>
+                    <img src="<c:url value="/img/centauro-rent-a-car-lisboa-portugal.jpg"/>" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../../ressources/img/avion.jpg" alt=""/>
+                    <img src="<c:url value="/img/avion.jpg"/>" alt=""/>
                 </div>
             </div>
             <div class="col-lg-3 col-sm-6">
                 <div class="thumbnail">
-                    <img src="../../ressources/img/train-hack-featured.jpg" alt=""/>
+                    <img src="<c:url value="/img/train-hack-featured.jpg"/>" alt=""/>
                 </div>
             </div>         
         </div>
 
-        <script src="META-INF.resources.webjars.bootstrap.4.3.0.js/bootstrap.min.js"></script>
-                <script src="META-INF.resources.webjars.jquery.3.4.0.dist/jquery.min.js"></script>
-                <script src="../../ressources/javascript/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<c:url value="/javascript/headerJS.js" />"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-        <!--<script src="../../JS/headerJS.js" type="text/javascript"></script>-->
     </body>
-
 </html>
