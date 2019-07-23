@@ -5,6 +5,7 @@
  */
 package com.Etravels.Controller;
 
+import com.Etravels.Model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -18,6 +19,14 @@ public class HomeController {
    
     @RequestMapping(value="/")
     public String showIndex(){
+        return "acceuil";
+    }
+    
+    @RequestMapping(value="/add")
+    public String addUser(){
+        
+        User user = new User();
+        user.setUserName("adilook");
         return "acceuil";
     }
 }
