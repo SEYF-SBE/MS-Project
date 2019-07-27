@@ -8,9 +8,12 @@ package com.Etravels.Controller;
 import com.Etravels.Model.User;
 import com.Etravels.Service.UserService;
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,19 +27,28 @@ import org.springframework.web.portlet.ModelAndView;
 @Controller
 public class HomeController {
    
-    //@Autowired
-    @Resource
-    @Qualifier("userService")
+    @Autowired
+    /*@Resource
+    @Qualifier("userService")*/
     private UserService userService;
+    
+    @ModelAttribute("user")
+    public User construct(){
+        return new User();
+    }
     
     @RequestMapping(value="/")
     public String showIndex(){
         return "acceuil";
     }
-    
+    /*
     @RequestMapping(value="/addUser", method = RequestMethod.POST)
-    public ModelAndView addUser(@ModelAttribute("userFormSignUp") User user){
+    public ModelAndView addUser(@Valid @ModelAttribute("user") User user,
+            BindingResult result, ModelMap model){
         
+        if (result.hasErrors()) {
+            return new ModelAndView("redirect:/test");
+        }
         //ModelAndView model = new ModelAndView("user/form");
         //String firstName = firstName;
         //model.addAttribute("ID", user.getId());
@@ -44,5 +56,5 @@ public class HomeController {
         //user.setUserName("adilook");
         userService.addUser(user);
         return new ModelAndView("redirect:/");
-    }
+    }*/
 }

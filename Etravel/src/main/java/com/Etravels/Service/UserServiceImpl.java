@@ -5,7 +5,7 @@
  */
 package com.Etravels.Service;
 
-import com.Etravals.DAO.UserDAO;
+import com.Etravels.DAO.UserDAO;
 import com.Etravels.Model.User;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

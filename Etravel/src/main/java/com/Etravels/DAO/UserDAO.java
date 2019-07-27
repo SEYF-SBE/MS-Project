@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.Etravals.DAO;
+package com.Etravels.DAO;
 
 import com.Etravels.Model.User;
 import org.springframework.stereotype.Repository;
