@@ -7,17 +7,11 @@ package com.Etravels.Controller;
 
 import com.Etravels.Model.User;
 import com.Etravels.Service.UserService;
-import javax.annotation.Resource;
-import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.portlet.ModelAndView;
 
 /**
  *
@@ -25,22 +19,16 @@ import org.springframework.web.portlet.ModelAndView;
  */
 
 @Controller
-//@RequestMapping("/register")
-public class HomeController {
-   
+@RequestMapping("/register")
+public class RegisterController {
+    
+    
     @Autowired
-    /*@Resource
-    @Qualifier("userService")*/
     private UserService userService;
     
     @ModelAttribute("user")
     public User construct(){
         return new User();
-    }
-    
-    @RequestMapping(value="/")
-    public String showIndex(){
-        return "acceuil";
     }
     
     @RequestMapping(value = "/user", method = RequestMethod.POST)
@@ -54,24 +42,8 @@ public class HomeController {
         model.addAttribute("birthDate", user.getId());
         model.addAttribute("phoneNumber", user.getId());
         model.addAttribute("pwHash", user.getId());*/
-        userService.addUser(user);
+        //userService.addUser(user);
         
-        return "acceuil";
+        return "test";
     }
-    /*
-    @RequestMapping(value="/addUser", method = RequestMethod.POST)
-    public ModelAndView addUser(@Valid @ModelAttribute("user") User user,
-            BindingResult result, ModelMap model){
-        
-        if (result.hasErrors()) {
-            return new ModelAndView("redirect:/test");
-        }
-        //ModelAndView model = new ModelAndView("user/form");
-        //String firstName = firstName;
-        //model.addAttribute("ID", user.getId());
-        //User user = new User();
-        //user.setUserName("adilook");
-        userService.addUser(user);
-        return new ModelAndView("redirect:/");
-    }*/
 }

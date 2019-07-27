@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
         <!-- Inline CSS based on choices in "Settings" tab -->
         <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-        <spring:url value="/addUser" var="addUrl"/>
+        <spring:url value="/user" var="user"/>
         <c:import url="header.jsp" />
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
@@ -76,7 +76,7 @@
 
                     <%-- <form:form action="${addUrl}" modelAttribute="user" method="POST" id="signUPForm">--%>
                     <!--<form action="addUser" method="POST" id="signUPForm">-->
-                    <form:form commandName="user" id="signUPForm">
+                    <form:form action="${user}" commandName="user" id="signUPForm">
 
                     <div class="row">
                         <div class="form-group col-xs-6">
@@ -84,7 +84,7 @@
                         </div>
 
                         <div class="form-group col-xs-6">
-                            <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"></form:input>
+                            <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
                             <%--<form:errors path="lastName"></form:errors>--%>
                         </div>
                         <%--</spring:bind>--%>
@@ -92,43 +92,43 @@
                     <div class="row">
                         <%--<spring:bind path="birthDate"> --%>
                         <div class="form-group col-xs-6">
-                            <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"></form:input>
+                            <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
                             <%--<form:errors path="birthDate"></form:errors>--%>
                         </div> 
                         <%--</spring:bind>--%>
                         <%--<spring:bind path="phoneNumber"><%--%>
                         <div class="form-group col-xs-6">
-                            <form:input type="text" path="phoneNumber" placeholder="Telephone number"  title="Enter your telphone number"></form:input>
+                            <form:input type="text" path="phoneNumber" placeholder="Telephone number"  title="Enter your telphone number"/>
                             <%--<form:errors path="phoneNumber"></form:errors>--%>
                         </div>
                         <%--</spring:bind>--%>
                     </div>
                     <%--<spring:bind path="userName">--%>
-                    <form:input type="text" path="userName" placeholder="Username" title="Enter username"></form:input>
+                    <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
                     <%-- <form:errors path="userName"></form:errors>--%>
                     <%--</spring:bind>--%>
                     <div class="row">
                         <%--<spring:bind path="password">--%>
-                        <div class="form-group col-xs-6">
-                            <form:input type="password" path="pwHash" placeholder="Password" title="Enter password"></form:input>
+                        <!--<div class="form-group col-xs-6">
+                           <%-- <form:input type="password" path="pwHash" placeholder="Password" title="Enter password"></form:input>
                             <%--<form:errors path="password"></form:errors>--%>
-                        </div>
+                        </div>-->
                         <%--</spring:bind>--%>
                         <%--<spring:bind path="passwordConf">--%>
                         <div class="form-group col-xs-6">
-                            <form:input type="password" path="pwHash" placeholder="Comfirm password" title="Confirm password"></form:input>
+                            <form:input type="password" path="pwHash" placeholder="Comfirm password" title="Confirm password"/>
                             <%--<form:errors path="passwordConf"></form:errors>--%>
                         </div>
                         <%--</spring:bind>--%>
                     </div>
                     <div class="row">
                         <div class="form-group col-xs-8">
-                            <button type="submit" name="" class="signUPBoxButton1 shareBetweenButtons">Sign up</button>
+                            <input type="submit" value="Sign up" class="signUPBoxButton1 shareBetweenButtons" />
                         </div>
-                        <div class="form-group col-xs-4">
+                        <!--<div class="form-group col-xs-4">
                             <button type="submit" name="" class="signUPBoxButton2 shareBetweenButtons">Sign in <i class="fa fa-angle-right"></i>
                             </button>
-                        </div>
+                        </div>-->
                     </div>
                 </form:form>
             </div>
