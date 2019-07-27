@@ -33,7 +33,7 @@ public class UserDAOImpl implements UserDAO{
     public void addUser(User user) {
         Session session = getSession();
         session.save(user);
-        //return Integer.valueOf(id.toString());
+       
     }
     
 }
