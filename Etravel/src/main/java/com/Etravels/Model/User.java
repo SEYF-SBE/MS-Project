@@ -5,7 +5,9 @@
  */
 package com.Etravels.Model;
 
+import Etravel.Hash.Hash;
 import java.io.Serializable;
+import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,14 +43,8 @@ public class User implements Serializable {
     private String phoneNumber;
     @Column(name = "PWHash")
     private String pwHash;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column(name = "LastUpdate")
+    private Timestamp LastUpdate;
 
     @Override
     public int hashCode() {
@@ -67,6 +63,18 @@ public class User implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setLastUpdate() {
+        this.LastUpdate = new Timestamp(System.currentTimeMillis());
+    }
+
+    public Timestamp getLastUpdate() {
+        return LastUpdate;
     }
 
     public void setEmail(String email) {
@@ -109,8 +117,12 @@ public class User implements Serializable {
         return pwHash;
     }
 
-    public void setPwHash(String pwHash) {
-        this.pwHash = pwHash;
+    public void setPwHash(String pwHash) throws Exception {
+        this.pwHash = Hash.getSaltedHash(pwHash);
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
