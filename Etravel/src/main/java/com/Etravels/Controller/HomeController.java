@@ -46,7 +46,6 @@ public class HomeController {
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     public String addUser(@ModelAttribute("user") User user){
         
-        System.out.println("its ok");
         /*model.addAttribute("username", user.getUserName());
         model.addAttribute("email", user.getEmail());
         model.addAttribute("firstName", user.getId());

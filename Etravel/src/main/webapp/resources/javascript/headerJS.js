@@ -9,7 +9,7 @@ $(document).ready(function () {
         $("nav ul").toggleClass("showing");
     });
     
-    var date_input = $('input[name="date"]');
+    var date_input = $('input[id="date"]');
     var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
     date_input.datepicker({
         format: 'dd/mm/yyyy',
@@ -17,8 +17,6 @@ $(document).ready(function () {
         todayHighlight: true,
         autoclose: true
     });
-    /*var dateValue = document.getElementById("date");
-    alert(dateValue.value);*/
 });
 
 $("#NextButton").on("click", function () {

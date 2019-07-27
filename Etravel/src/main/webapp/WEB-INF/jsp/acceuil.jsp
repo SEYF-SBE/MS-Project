@@ -16,7 +16,7 @@
 
         <link href="<c:url value="/styles/acceuilStyle.css"/>" rel="stylesheet" type="text/css"/>
         <script
-            src="https://code.jquery.com/jquery-3.4.1.js"
+            src="<c:url value="https://code.jquery.com/jquery-3.4.1.js"/>"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
             crossorigin="anonymous">
         </script>
@@ -73,10 +73,9 @@
                     <div class="or-seperator"><b>or</b></div>
                 </div>
                 <div id="userNameDiv">
-
                     <%-- <form:form action="${addUrl}" modelAttribute="user" method="POST" id="signUPForm">--%>
                     <!--<form action="addUser" method="POST" id="signUPForm">-->
-                    <form:form action="${user}" commandName="user" id="signUPForm">
+                    <form:form action="${user}" modelAttribute="user" id="signUPForm">
 
                     <div class="row">
                         <div class="form-group col-xs-6">
@@ -174,8 +173,8 @@
     </div>
 
     <script src="<c:url value="/javascript/headerJS.js" />"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <script type="text/javascript" src="<c:url value="https://code.jquery.com/jquery-1.11.3.min.js"/>"></script>
+    <script type="text/javascript" src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"/>"></script>
+    <link rel="stylesheet" href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>"/>
 </body>
 </html>
