@@ -22,14 +22,18 @@ import org.springframework.stereotype.Repository;
 @Transactional
 public class UserDAOImpl implements UserDAO{
 
-    @Autowired(required = true)
+    @Autowired(required=true)
     private SessionFactory sessionFactory;
     
+    private Session getSession(){
+        return sessionFactory.getCurrentSession();
+    }
+    
     @Override
-    public int addUser(User user) {
-        Session session = sessionFactory.getCurrentSession();
-        Long id = (Long)session.save(user);
-        return Integer.valueOf(id.toString());
+    public void addUser(User user) {
+        Session session = getSession();
+        session.save(user);
+        //return Integer.valueOf(id.toString());
     }
     
 }

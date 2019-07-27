@@ -6,12 +6,14 @@
 package com.Etravals.DAO;
 
 import com.Etravels.Model.User;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Utilisateur 1
  */
+@Repository
 public interface UserDAO {
     
-    public int addUser(User user);
+    public void addUser(User user);
 }

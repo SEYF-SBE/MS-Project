@@ -60,6 +60,13 @@
           class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+    
+    
+    <!-- i want to add user bean
+    <bean id="userServiceImpl" class="com.Etravels.Service.UserServiceImpl"/>
+    <bean id="userService" class="com.Etravels.Controller.HomeController"/>
+    <bean id="sessionFactory" class="com.Etravals.DAO.UserDAOImpl"/>-->
+
 
     <tx:annotation-driven transaction-manager="transactionManager" />
             

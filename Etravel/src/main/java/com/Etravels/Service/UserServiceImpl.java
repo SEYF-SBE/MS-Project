@@ -18,16 +18,17 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService{    
     
-    
-    @Autowired
+    @Autowired(required = true)
     private UserDAO userdao;
     
     @Override
-    public int addUser(User user) {
+    public void addUser(User user) {
+        //public int addUser(User user) {
         
-        return userdao.addUser(user); 
+        userdao.addUser(user);
+        //return userdao.addUser(user); 
     }
     
     

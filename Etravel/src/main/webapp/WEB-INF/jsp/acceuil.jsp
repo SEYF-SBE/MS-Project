@@ -5,7 +5,9 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +35,7 @@
         <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
         <!-- Inline CSS based on choices in "Settings" tab -->
         <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-
+        <spring:url value="/addUser" var="addUrl"/>
         <c:import url="header.jsp" />
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
@@ -71,31 +73,54 @@
                     <div class="or-seperator"><b>or</b></div>
                 </div>
                 <div id="userNameDiv">
-                    <form action="#" method="POST" id="signUPForm">
+                    
+                    <form:form action="${addUrl}" modelAttribute="userFormSignUp" method="POST" id="signUPForm">
+                        <!--<form action="addUser" method="POST" id="signUPForm">-->
                         <div class="row">
-                            <div class="form-group col-xs-6">
-                                <input type="text" name="" placeholder="First name"  title="Enter first name"/>
-                            </div>
-                            <div class="form-group col-xs-6">
-                                <input type="text" name="" placeholder="Last name"  title="Enter last name"/>
-                            </div>
+                            <spring:bind path="firstname">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="text" path="firstname" name="firstName" placeholder="First name" title="Enter first name" autofocus="true"></form:input>
+                                    <form:errors path="firstname"></form:errors>
+                                    </div>
+                            </spring:bind>
+                            <spring:bind path="lastname">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="text" path="lastname" placeholder="Last name"  title="Enter last name" autofocus="true"></form:input>
+                                    <form:errors path="lastname"></form:errors>
+                                    </div>
+                            </spring:bind>
                         </div>
                         <div class="row">
-                            <div class="form-group col-xs-6">
-                                <input type="text" name="date" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
-                            </div> 
-                            <div class="form-group col-xs-6">
-                                <input type="text" name="" placeholder="Telephone number"  title="Enter your telphone number"/>
-                            </div>
+                            <spring:bind path="bthdayDate">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="text" path="bthdayDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"></form:input>
+                                    <form:errors path="bthdayDate"></form:errors>
+                                    </div> 
+                            </spring:bind>
+                            <spring:bind path="telph">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="text" path="telph" placeholder="Telephone number"  title="Enter your telphone number"></form:input>
+                                    <form:errors path="telph"></form:errors>
+                                    </div>
+                            </spring:bind>
                         </div>
-                        <input type="text" name="" placeholder="Username" title="Enter username"/>
+                        <spring:bind path="username">
+                            <form:input type="text" path="username" placeholder="Username" title="Enter username"></form:input>
+                            <form:errors path="username"></form:errors>
+                        </spring:bind>
                         <div class="row">
-                            <div class="form-group col-xs-6">
-                                <input type="password" name="" placeholder="Password" title="Enter password"/>
-                            </div>
-                            <div class="form-group col-xs-6">
-                                <input type="password" name="" placeholder="Comfirm password" title="Confirm password"/>
-                            </div>
+                            <spring:bind path="password">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="password" path="password" placeholder="Password" title="Enter password"></form:input>
+                                    <form:errors path="password"></form:errors>
+                                    </div>
+                            </spring:bind>
+                            <spring:bind path="passwordConf">
+                                <div class="form-group col-xs-6">
+                                    <form:input type="password" path="passwordConf" placeholder="Comfirm password" title="Confirm password"></form:input>
+                                    <form:errors path="passwordConf"></form:errors>
+                                    </div>
+                            </spring:bind>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-8">
@@ -106,7 +131,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form:form>
                 </div>
             </div>
 
