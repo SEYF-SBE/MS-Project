@@ -35,7 +35,6 @@
         <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
         <!-- Inline CSS based on choices in "Settings" tab -->
         <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
-        <spring:url value="/user" var="user"/>
         <c:import url="header.jsp" />
         <div class="divConnect" >
             <div class="loginBox transparenceEffect">
@@ -75,106 +74,150 @@
                 <div id="userNameDiv">
                     <%-- <form:form action="${addUrl}" modelAttribute="user" method="POST" id="signUPForm">--%>
                     <!--<form action="addUser" method="POST" id="signUPForm">-->
+                    <spring:url value="/user" var="user"/>
                     <form:form action="${user}" modelAttribute="user" id="signUPForm">
 
-                    <div class="row">
-                        <div class="form-group col-xs-6">
-                            <form:input path="firstName" placeholder="First name"/>
-                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <form:input path="firstName" placeholder="First name"/>
+                            </div>
 
-                        <div class="form-group col-xs-6">
-                            <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
-                            <%--<form:errors path="lastName"></form:errors>--%>
+                            <div class="form-group col-xs-6">
+                                <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
+                                <%--<form:errors path="lastName"></form:errors>--%>
+                            </div>
+                            <%--</spring:bind>--%>
                         </div>
-                        <%--</spring:bind>--%>
-                    </div>
-                    <div class="row">
-                        <%--<spring:bind path="birthDate"> --%>
-                        <div class="form-group col-xs-6">
-                            <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
-                            <%--<form:errors path="birthDate"></form:errors>--%>
-                        </div> 
-                        <%--</spring:bind>--%>
-                        <%--<spring:bind path="phoneNumber"><%--%>
-                        <div class="form-group col-xs-6">
-                            <form:input type="text" path="phoneNumber" placeholder="Telephone number"  title="Enter your telphone number"/>
-                            <%--<form:errors path="phoneNumber"></form:errors>--%>
+                        <div class="row">
+                            <%--<spring:bind path="birthDate"> --%>
+                            <div class="form-group col-xs-6">
+                                <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
+                                <%--<form:errors path="birthDate"></form:errors>--%>
+                            </div> 
+                            <%--</spring:bind>--%>
+                            <%--<spring:bind path="phoneNumber"><%--%>
+                            <div class="form-group col-xs-6">
+                                <form:input type="text" path="phoneNumber" placeholder="Telephone number"  title="Enter your telphone number"/>
+                                <%--<form:errors path="phoneNumber"></form:errors>--%>
+                            </div>
+                            <%--</spring:bind>--%>
                         </div>
+                        <%--<spring:bind path="userName">--%>
+                        <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
+                        <%-- <form:errors path="userName"></form:errors>--%>
                         <%--</spring:bind>--%>
-                    </div>
-                    <%--<spring:bind path="userName">--%>
-                    <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
-                    <%-- <form:errors path="userName"></form:errors>--%>
-                    <%--</spring:bind>--%>
-                    <div class="row">
-                        <%--<spring:bind path="password">--%>
-                        <!--<div class="form-group col-xs-6">
-                           <%-- <form:input type="password" path="pwHash" placeholder="Password" title="Enter password"></form:input>
+                        <div class="row">
+                            <%--<spring:bind path="password">--%>
+                            <!--<div class="form-group col-xs-6">
+                            <%-- <form:input type="password" path="pwHash" placeholder="Password" title="Enter password"></form:input>
                             <%--<form:errors path="password"></form:errors>--%>
                         </div>-->
-                        <%--</spring:bind>--%>
-                        <%--<spring:bind path="passwordConf">--%>
-                        <div class="form-group col-xs-6">
-                            <form:input type="password" path="pwHash" placeholder="Comfirm password" title="Confirm password"/>
-                            <%--<form:errors path="passwordConf"></form:errors>--%>
+                            <%--</spring:bind>--%>
+                            <%--<spring:bind path="passwordConf">--%>
+                            <div class="form-group col-xs-6">
+                                <form:input type="password" path="pwHash" placeholder="Comfirm password" title="Confirm password"/>
+                                <%--<form:errors path="passwordConf"></form:errors>--%>
+                            </div>
+                            <%--</spring:bind>--%>
                         </div>
-                        <%--</spring:bind>--%>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-xs-8">
-                            <input type="submit" value="Sign up" class="signUPBoxButton1 shareBetweenButtons" />
+                        <div class="row">
+                            <div class="form-group col-xs-8">
+                                <input type="submit" value="Sign up" class="signUPBoxButton1 shareBetweenButtons" />
+                            </div>
+                            <!--<div class="form-group col-xs-4">
+                                <button type="submit" name="" class="signUPBoxButton2 shareBetweenButtons">Sign in <i class="fa fa-angle-right"></i>
+                                </button>
+                            </div>-->
                         </div>
-                        <!--<div class="form-group col-xs-4">
-                            <button type="submit" name="" class="signUPBoxButton2 shareBetweenButtons">Sign in <i class="fa fa-angle-right"></i>
-                            </button>
-                        </div>-->
-                    </div>
-                </form:form>
-            </div>
-        </div>
-
-        <div class="forgetPWDiv displayHide loginBox">
-            <h1 class="text-center titleLogin"><b>Forgot Password?</b></h1>
-            <br/>
-            <p class="text-center">You can reset your password here.</p>
-            <form action="#" method="POST" id="forgetPWForm">
-                <div id="">
-                    <br/><br/>
-                    <input name="" placeholder="Enter your email" type="text"/> <br/>
-                    <br/>
-                    <button type="button" id="resetPWButton" class="loginBoxButton">Reset Password</button>
+                    </form:form>
                 </div>
-            </form>
+            </div>
+
+            <div class="forgetPWDiv displayHide loginBox">
+                <h1 class="text-center titleLogin"><b>Forgot Password?</b></h1>
+                <br/>
+                <p class="text-center">You can reset your password here.</p>
+                <form action="#" method="POST" id="forgetPWForm">
+                    <div id="">
+                        <br/><br/>
+                        <input name="" placeholder="Enter your email" type="text"/> <br/>
+                        <br/>
+                        <button type="button" id="resetPWButton" class="loginBoxButton">Reset Password</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
-    </div>
-    <h1><c:out value=" Our services" /></h1>
-    <div class="row">
-        <div class="col-lg-3 col-sm-6">
-            <div class="thumbnail">
-                <img src="<c:url value="/img/4-iPad-Or-24-Carats-Hotel-Burj-al-Arab-de-Dubai.jpg"/>" alt=""/>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="thumbnail">
-                <img src="<c:url value="/img/centauro-rent-a-car-lisboa-portugal.jpg"/>" alt=""/>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="thumbnail">
-                <img src="<c:url value="/img/avion.jpg"/>" alt=""/>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6">
-            <div class="thumbnail">
-                <img src="<c:url value="/img/train-hack-featured.jpg"/>" alt=""/>
-            </div>
-        </div>         
-    </div>
+        <div class="servicesDiv">
+            <h1 class="ourServices"><b><c:out value=" Our services" /></b></h1>
+            <div class="container">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="<c:url value="/img/architecture-and-city.png"/>" alt=""/>
+                            <h3>Hotel</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Chose your hotel</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="<c:url value="/javascript/headerJS.js" />"></script>
-    <script type="text/javascript" src="<c:url value="https://code.jquery.com/jquery-1.11.3.min.js"/>"></script>
-    <script type="text/javascript" src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"/>"></script>
-    <link rel="stylesheet" href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>"/>
-</body>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="<c:url value="/img/taxi.png"/>" alt=""/>
+                            <h3>Car</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Rent a car</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="<c:url value="/img/flight.png"/>" alt=""/>
+                            <h3>Plane</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Take a plane</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>             
+
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="<c:url value="/img/train.png"/>" alt=""/>
+                            <h3>Train</h3>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Take train</p>
+                            <a href="#">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>    
+        </div>
+
+
+        <script src="<c:url value="/javascript/headerJS.js" />"></script>
+        <script type="text/javascript" src="<c:url value="https://code.jquery.com/jquery-1.11.3.min.js"/>"></script>
+        <script type="text/javascript" src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"/>"></script>
+        <link rel="stylesheet" href="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>"/>
+    </body>
 </html>
