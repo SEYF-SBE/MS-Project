@@ -72,64 +72,96 @@
                     <div class="or-seperator"><b>or</b></div>
                 </div>
                 <div id="userNameDiv">
-                    <%-- <form:form action="${addUrl}" modelAttribute="user" method="POST" id="signUPForm">--%>
+                    <%--<form:form action="${addUrl}" modelAttribute="user" method="POST" id="signUPForm">--%>
                     <!--<form action="addUser" method="POST" id="signUPForm">-->
-                    <spring:url value="/user" var="user"/>
-                    <form:form action="${user}" modelAttribute="user" id="signUPForm">
+                    <spring:url value="/addUserAjax" var="user"/>
+                    <form:form role="form" action="${user}" modelAttribute="user" id="signUPForm">
 
                         <div class="row">
                             <div class="form-group col-xs-6">
-                                <form:input path="firstName" placeholder="First name"/>
+                                <form:input type="text" path="firstName" placeholder="First name"/>
                             </div>
 
                             <div class="form-group col-xs-6">
                                 <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
-                                <%--<form:errors path="lastName"></form:errors>--%>
                             </div>
-                            <%--</spring:bind>--%>
                         </div>
                         <div class="row">
-                            <%--<spring:bind path="birthDate"> --%>
                             <div class="form-group col-xs-6">
                                 <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
-                                <%--<form:errors path="birthDate"></form:errors>--%>
                             </div> 
-                            <%--</spring:bind>--%>
-                            <%--<spring:bind path="phoneNumber"><%--%>
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="phoneNumber" placeholder="Telephone number"  title="Enter your telphone number"/>
-                                <%--<form:errors path="phoneNumber"></form:errors>--%>
+                                <form:input type="text" path="phoneNumber" placeholder="Phone number"  title="Enter your telphone number"/>
                             </div>
-                            <%--</spring:bind>--%>
-                        </div>
-                        <%--<spring:bind path="userName">--%>
-                        <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
-                        <%-- <form:errors path="userName"></form:errors>--%>
-                        <%--</spring:bind>--%>
-                        <div class="row">
-                            <%--<spring:bind path="password">--%>
-                            <!--<div class="form-group col-xs-6">
-                            <%-- <form:input type="password" path="pwHash" placeholder="Password" title="Enter password"></form:input>
-                            <%--<form:errors path="password"></form:errors>--%>
-                        </div>-->
-                            <%--</spring:bind>--%>
-                            <%--<spring:bind path="passwordConf">--%>
-                            <div class="form-group col-xs-6">
-                                <form:input type="password" path="pwHash" placeholder="Comfirm password" title="Confirm password"/>
-                                <%--<form:errors path="passwordConf"></form:errors>--%>
-                            </div>
-                            <%--</spring:bind>--%>
                         </div>
                         <div class="row">
-                            <div class="form-group col-xs-8">
-                                <input type="submit" value="Sign up" class="signUPBoxButton1 shareBetweenButtons" />
+                            <div class="form-group col-xs-6">
+                                <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
                             </div>
-                            <!--<div class="form-group col-xs-4">
-                                <button type="submit" name="" class="signUPBoxButton2 shareBetweenButtons">Sign in <i class="fa fa-angle-right"></i>
-                                </button>
-                            </div>-->
+                            <div class="form-group col-xs-6">
+                                <form:input type="email" path="email" placeholder="Email" title="Enter your email"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-6">
+                                <form:input type="password" path="pwHash" class="pw" placeholder="Password" title="Enter password"/>
+                            </div>
+                            <div class="form-group col-xs-6">
+                                <form:input type="password" path="pwHash" class="pwConf" placeholder="Comfirm password" title="Confirm password"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-10">
+                                <button type="button" class="signUPBoxButton1 shareBetweenButtons">Sign up</button>
+                            </div>
+                            <div class="form-group col-xs-2">
+                                <a class="signUPBoxButton2">Sign in <i class="fa fa-angle-right"></i></a>
+                            </div>
                         </div>
                     </form:form>
+                    <!--
+                        <div class="row">
+                             <div class="form-group col-xs-6">
+                                 <input type="text" name="firstName" placeholder="First name"/>
+                             </div>
+ 
+                             <div class="form-group col-xs-6">
+                                 <input type="text" name="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-xs-6">
+                                 <input type="text" name="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
+                             </div> 
+                             <div class="form-group col-xs-6">
+                                 <input type="text" name="phoneNumber" placeholder="Phone number"  title="Enter your telphone number"/>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-xs-6">
+                                 <input type="text" name="userName" placeholder="Username" title="Enter username"/>
+                             </div>
+                             <div class="form-group col-xs-6">
+                                 <input type="email" name="email" placeholder="Email" title="Enter your email"/>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-xs-6">
+                                 <input type="password" name="password" placeholder="Password" title="Enter password"/>
+                             </div>
+                             <div class="form-group col-xs-6">
+                                 <input type="password" name="pwConf" placeholder="Comfirm password" title="Confirm password"/>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="form-group col-xs-10">
+                                 <button type="button" class="signUPBoxButton1 shareBetweenButtons">Sign up</button>
+                             </div>
+                             <div class="form-group col-xs-2">
+                                 <a class="signUPBoxButton2">Sign in <i class="fa fa-angle-right"></i></a>
+                             </div>
+                         </div>-->
+
                 </div>
             </div>
 
@@ -214,9 +246,39 @@
             </div>    
         </div>
 
+        <!--Model Popup starts-->
+        <div class="container" >
+            <div class="row">
+                <div class="modal fade" id="ignismyModal" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="thank-you-pop">
+                                    <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                                    <h1>Thank You!</h1>
+                                    <p>Your submission is received and we will contact you soon</p>
+                                    <h3 class="cupon-pop">Your Id: <span>12345</span></h3>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Model Popup ends-->
+
+
         <!-- footer part -->
         <div>
-        <c:import url="footer.jsp" />
+            <c:import url="footer.jsp" />
         </div>
 
         <script src="<c:url value="/javascript/headerJS.js" />"></script>

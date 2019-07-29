@@ -7,7 +7,7 @@ body{
 
 /* login image background style */
 .divConnect{
-    height: 560px;
+    height: 580px;
     background: url(../img/solo-travel.jpg);
     font-family: sans-serif
 }
@@ -58,7 +58,7 @@ body{
     margin-bottom: 20px;
 }
 
-.loginBox input[type="text"], input[type="password"]{
+.loginBox input[type="text"], input[type="password"], input[type="email"]{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -72,7 +72,7 @@ body{
 .signUPBoxButton1{
     background: #1abc9c;
     color: white;
-    left: 60%;
+    left: 48%;
     width: 100px;
 }
 .shareBetweenButtons{
@@ -85,11 +85,11 @@ body{
     font-size: 15px;
     border-radius: 20px;
 }
-.signUPBoxButton2{
-    background: #FFF;
-    left: 45%;
-    color: black;
-    width: 80px;
+a.signUPBoxButton2{
+    
+    position: relative;
+    margin-right: 70px;
+    color: #999;
 }
 
 .loginBoxButton{
@@ -111,6 +111,7 @@ body{
 
 .loginBox a:hover{
     color: white;
+    cursor: pointer;
 }
 
 .textForget{
