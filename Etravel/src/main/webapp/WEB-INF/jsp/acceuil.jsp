@@ -149,7 +149,7 @@
         </div>
 
         <div class="servicesDiv">
-            <h1 class="ourServices"><b><c:out value=" Our services" /></b></h1>
+            <h1 class="ourServices" data-text="Our services"><c:out value="Our services" /></h1>
             <div class="container">
                 <div class="card">
                     <div class="face face1">
@@ -214,6 +214,10 @@
             </div>    
         </div>
 
+        <!-- footer part -->
+        <div>
+        <c:import url="footer.jsp" />
+        </div>
 
         <script src="<c:url value="/javascript/headerJS.js" />"></script>
         <script type="text/javascript" src="<c:url value="https://code.jquery.com/jquery-1.11.3.min.js"/>"></script>
