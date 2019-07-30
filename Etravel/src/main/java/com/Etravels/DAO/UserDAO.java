@@ -14,6 +14,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserDAO {
-    
+
     public void addUser(User user);
+
+    public boolean userExistByEmail(String email);
 }

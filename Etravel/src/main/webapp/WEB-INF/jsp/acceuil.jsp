@@ -50,7 +50,7 @@
                     <form action="#" method="POST" id="signinForm">
                         <div id="userNameDiv">
                             <br/>
-                            <input type="text" name="" placeholder="Enter Username or Email"/> <br/>
+                            <input type="text" id="userNameEmail" placeholder="Enter Username or Email"/> <br/>
                             <button type="button" id="NextButton" class="loginBoxButton">Next</button>
                         </div>
                         <div class="displayHide" id="passwordDiv">
@@ -119,49 +119,6 @@
                             </div>
                         </div>
                     </form:form>
-                    <!--
-                        <div class="row">
-                             <div class="form-group col-xs-6">
-                                 <input type="text" name="firstName" placeholder="First name"/>
-                             </div>
- 
-                             <div class="form-group col-xs-6">
-                                 <input type="text" name="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="form-group col-xs-6">
-                                 <input type="text" name="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
-                             </div> 
-                             <div class="form-group col-xs-6">
-                                 <input type="text" name="phoneNumber" placeholder="Phone number"  title="Enter your telphone number"/>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="form-group col-xs-6">
-                                 <input type="text" name="userName" placeholder="Username" title="Enter username"/>
-                             </div>
-                             <div class="form-group col-xs-6">
-                                 <input type="email" name="email" placeholder="Email" title="Enter your email"/>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="form-group col-xs-6">
-                                 <input type="password" name="password" placeholder="Password" title="Enter password"/>
-                             </div>
-                             <div class="form-group col-xs-6">
-                                 <input type="password" name="pwConf" placeholder="Comfirm password" title="Confirm password"/>
-                             </div>
-                         </div>
-                         <div class="row">
-                             <div class="form-group col-xs-10">
-                                 <button type="button" class="signUPBoxButton1 shareBetweenButtons">Sign up</button>
-                             </div>
-                             <div class="form-group col-xs-2">
-                                 <a class="signUPBoxButton2">Sign in <i class="fa fa-angle-right"></i></a>
-                             </div>
-                         </div>-->
-
                 </div>
             </div>
 

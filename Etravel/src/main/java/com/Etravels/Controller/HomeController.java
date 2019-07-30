@@ -73,5 +73,13 @@ public class HomeController {
             return "failed";
         }
     }
+    
+    @RequestMapping(value = "/findUserByEmail", method = RequestMethod.POST)
+    public @ResponseBody String userExistEmail(@RequestParam(required = true) String email){
+        if(userService.userExistByEmail(email)){
+            return "success";
+        }
+        return "failed";
+    }
 
 }

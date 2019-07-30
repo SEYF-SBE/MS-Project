@@ -13,6 +13,8 @@ import com.Etravels.Model.User;
  */
 public interface UserService {
 
-    //public int addUser(User user);
     public void addUser(User user);
+
+    public boolean userExistByEmail(String email);
+
 }

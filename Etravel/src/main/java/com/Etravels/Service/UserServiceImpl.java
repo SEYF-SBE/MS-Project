@@ -28,6 +28,11 @@ public class UserServiceImpl implements UserService{
         
         userdao.addUser(user);
     }
+
+    @Override
+    public boolean userExistByEmail(String email) {
+        return userdao.userExistByEmail(email);
+    }
     
     
 }
