@@ -52,7 +52,7 @@ $(".signUPBoxButton1").on("click", function () {
     var pw = $(".pw").val();
     var pwConf = $(".pwConf").val();
 
-    //if (pw === pwConf) {
+    if (pw === pwConf) {
         $.ajax({
             type: 'POST',
             url: "./addUserAjax",
@@ -67,19 +67,24 @@ $(".signUPBoxButton1").on("click", function () {
                 password: $("#pwHash").val()
             },
             success: function (data) {
-                console.log(data);
-                if (data === "success") {
-                   // $("#ignismyModal").modal('show');
-                }
+                //console.log(data);
+                $(".btnHiddenModal").trigger("click");
+                setTimeout(function () {
+                    $('#myModal').hide();
+                }, 60000);
+                location.reload(true);
+                /*if (data === "success") {
+                }*/
+                
             },
             error: function (e) {
                 alert("Error while request ajax!!");
-                console.log("Error", e);
+                //console.log("Error", e);
             }
         });
         // show a p success class to informe use that it's ok
-    //} else {
-                // show a p danger class to informe use that it's not ok
-    //}
+    } else {
+        // show a p danger class to informe use that it's not ok
+    }
     /**/
 });
