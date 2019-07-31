@@ -38,9 +38,28 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean userExistByEmail(String email) {
+        User user = null;
         Query query = (Query) sessionFactory.getCurrentSession().createQuery("from User where email = :email");
         query.setParameter("email", email);
-        User user = (User) query.list().get(0);
+        try {
+            user = (User) query.list().get(0);
+        } catch (IndexOutOfBoundsException e) {
+            e.getStackTrace();
+        }
+        return null != user;
+
+    }
+
+    @Override
+    public boolean userExistUserName(String userName) {
+        User user = null;
+        Query query = (Query) sessionFactory.getCurrentSession().createQuery("from User where username = :username");
+        query.setParameter("username", userName);
+        try {
+            user = (User) query.list().get(0);
+        } catch (IndexOutOfBoundsException e) {
+            e.getStackTrace();
+        }
         return null != user;
     }
 

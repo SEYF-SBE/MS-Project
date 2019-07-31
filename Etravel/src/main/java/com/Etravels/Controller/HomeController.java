@@ -56,27 +56,46 @@ public class HomeController {
             @RequestParam(required = true) String email,
             @RequestParam(required = true) String password,
             @ModelAttribute("user") User user) {
-        try{
-            //il faut un test s'il exist le nouveau user dans la bd ou non 
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setBirthDate(birthDate);
-            user.setPhoneNumber(phoneNumber);
-            user.setUserName(userName);
-            user.setEmail(email);
-            user.setPwHash(password);
+
+        //il faut un test s'il exist le nouveau user dans la bd ou non userExistByEmail()
+        if ((userService.userExistByEmail(email))) {
+            return "failed";
+        } else {
+            try {
+                user.setFirstName(firstName);
+                user.setLastName(lastName);
+                user.setBirthDate(birthDate);
+                user.setPhoneNumber(phoneNumber);
+                user.setUserName(userName);
+                user.setEmail(email);
+                user.setPwHash(password);
 
                 userService.addUser(user);
                 return "success";
-        }catch(Exception ex){
-            Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
-            return "failed";
+
+            } catch (Exception ex) {
+                Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
+                return "failed";
+            }
         }
+
     }
-    
+
+    /* a function to find a user by his email */
     @RequestMapping(value = "/findUserByEmail", method = RequestMethod.POST)
-    public @ResponseBody String userExistEmail(@RequestParam(required = true) String email){
-        if(userService.userExistByEmail(email)){
+    public @ResponseBody
+    String userExistEmail(@RequestParam(required = true) String email) {
+        if (userService.userExistByEmail(email)) {
+            return "success";
+        }
+        return "failed";
+    }
+
+    /* a function to find a user by his email */
+    @RequestMapping(value = "/findUserByUserName", method = RequestMethod.POST)
+    public @ResponseBody
+    String userExistUserName(@RequestParam(required = true) String userName) {
+        if (userService.userExistUserName(userName)) {
             return "success";
         }
         return "failed";

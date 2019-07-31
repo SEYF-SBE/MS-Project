@@ -19,15 +19,15 @@ $(document).ready(function () {
     });
 });
 
+/* Ajax function to find if the username/email is in database */
 $("#NextButton").on("click", function () {
-    /* Ajax function to find if the username/email is in database */
     /* if isn't empty */
     if (!$("#userNameEmail").val()) {
-        alert("it is empty");
+        //alert("it is empty");
     } else {
-        alert("isn't empty");
+        //alert("isn't empty");
         /* if is an email */
-        if ($("#userNameEmail").val().search("@") != -1) {
+        if ($("#userNameEmail").val().search("@") !== -1) {
             //alert("is an email");
             $.ajax({
                 type: 'POST',
@@ -35,12 +35,14 @@ $("#NextButton").on("click", function () {
                 //timeout: 100000,
                 catch : false,
                 data: {
-                    email: $("#userNameEmail").val(),
+                    email: $("#userNameEmail").val()
                 },
                 success: function (data) {
                     //console.log(data);
-                    $("#userNameDiv").hide(500);
-                    $("#passwordDiv").show(500);
+                    if (data === "success") {
+                        $("#userNameDiv").hide(500);
+                        $("#passwordDiv").show(500);
+                    }
                 },
                 error: function (e) {
                     alert("Error while request ajax!!");
@@ -50,6 +52,27 @@ $("#NextButton").on("click", function () {
 
         } else { /* if is an username*/
             // alert("isn't an email");
+            $.ajax({
+                type: 'POST',
+                url: "./findUserByUserName",
+                //timeout: 100000,
+                catch : false,
+                data: {
+                    userName: $("#userNameEmail").val()
+                },
+                success: function (data) {
+                    //console.log(data);
+                    if (data === "success") {
+                        $("#userNameDiv").hide(500);
+                        $("#passwordDiv").show(500);
+                    }
+
+                },
+                error: function (e) {
+                    alert("Error while request ajax!!");
+                    //console.log("Error", e);
+                }
+            });
 
         }
 
@@ -100,14 +123,19 @@ $(".signUPBoxButton1").on("click", function () {
             },
             success: function (data) {
                 //console.log(data);
-                $(".btnHiddenModal").trigger("click");
-                setTimeout(function () {
-                    $('#myModal').hide();
-                }, 60000);
-                location.reload(true);
-                /*if (data === "success") {
+                if (data === "success") {
+                    $(".btnHiddenModal").trigger("click");
+                }
+                /*setTimeout(function () {
+                 $('#myModal').hide();
+                 }, 60000);
+                 location.reload(true);
+                 /*if (data === "success") {
                  }*/
 
+            },
+            fail: function () {
+                alert("we can not add it in DB");
             },
             error: function (e) {
                 alert("Error while request ajax!!");

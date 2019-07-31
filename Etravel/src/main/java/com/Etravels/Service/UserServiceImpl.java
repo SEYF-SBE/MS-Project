@@ -33,6 +33,11 @@ public class UserServiceImpl implements UserService{
     public boolean userExistByEmail(String email) {
         return userdao.userExistByEmail(email);
     }
+
+    @Override
+    public boolean userExistUserName(String userName) {
+        return userdao.userExistUserName(userName);
+    }
     
     
 }
