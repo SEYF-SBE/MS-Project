@@ -55,7 +55,7 @@
                         </div>
                         <div class="displayHide" id="passwordDiv">
                             <br/>
-                            <input type="password" name="" placeholder="Enter Password"/> <br/>
+                            <input type="password" name="" placeholder="Enter Password" id="passwordFeildConnct"/> <br/>
                             <a href="#" class="textForget">Forget password ?</a><br/> 
                             <button type="submit" name="" class="loginBoxButton">Sign in</button><br/>
                         </div>

@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".menu-icon").on("click", function () {
         $("nav ul").toggleClass("showing");
     });
+    
 
     var date_input = $('input[id="date"]');
     var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
@@ -23,6 +24,10 @@ $(document).ready(function () {
 $("#NextButton").on("click", function () {
     /* if isn't empty */
     if (!$("#userNameEmail").val()) {
+        //$("#userNameEmail").css()
+        $("#userNameEmail").css("border-color", "#03d4e3");
+        $("#userNameEmail").css("color", "#03d4e3");
+        $("#userNameEmail").attr("placeholder", "Type your username or email here");
         //alert("it is empty");
     } else {
         //alert("isn't empty");
@@ -73,11 +78,21 @@ $("#NextButton").on("click", function () {
                     //console.log("Error", e);
                 }
             });
-
         }
-
     }
+});
 
+/* connction button */
+$(".loginBoxButton").on("click", function(){
+    if (!$("#passwordFeildConnct").val()) {
+        $("#passwordFeildConnct").css("border-color", "#03d4e3");
+        $("#passwordFeildConnct").css("color", "#03d4e3");
+        $("#passwordFeildConnct").attr("placeholder", "Type your passeword here");
+        //alert("it is empty");
+    } else {
+        //ajax
+    }
+    
 });
 
 $(".signUp").on("click", function () {
