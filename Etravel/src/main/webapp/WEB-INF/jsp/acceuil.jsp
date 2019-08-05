@@ -79,35 +79,35 @@
 
                         <div class="row">
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="firstName" placeholder="First name"/>
+                                <form:input type="text" path="firstName" placeholder="First name" required="required"/>
                             </div>
 
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true"/>
+                                <form:input type="text" path="lastName" placeholder="Last name"  title="Enter last name" autofocus="true" required="required"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date"/>
+                                <form:input type="text" path="birthDate" id="date" placeholder="Birthday date MM/DD/YYYY" title="Enter Birthday date" required="required"/>
                             </div> 
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="phoneNumber" placeholder="Phone number"  title="Enter your telphone number"/>
+                                <form:input type="text" path="phoneNumber" placeholder="Phone number"  title="Enter your telphone number" required="required" maxlength="13" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-6">
-                                <form:input type="text" path="userName" placeholder="Username" title="Enter username"/>
+                                <form:input type="text" path="userName" placeholder="Username" title="Enter username" required="required"/>
                             </div>
                             <div class="form-group col-xs-6">
-                                <form:input type="email" path="email" placeholder="Email" title="Enter your email"/>
+                                <form:input type="email" path="email" placeholder="Email" title="Enter your email" required="required"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-xs-6">
-                                <form:input type="password" path="pwHash" class="pw" placeholder="Password" title="Enter password"/>
+                                <form:input type="password" path="pwHash" class="pw" placeholder="Password" title="Enter password" required="required"/>
                             </div>
                             <div class="form-group col-xs-6">
-                                <form:input type="password" path="pwHash" class="pwConf" placeholder="Comfirm password" title="Confirm password"/>
+                                <form:input type="password" path="pwHash" class="pwConf" placeholder="Comfirm password" title="Confirm password" required="required"/>
                             </div>
                         </div>
                         <div class="row">
